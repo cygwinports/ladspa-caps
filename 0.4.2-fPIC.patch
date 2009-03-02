@@ -1,0 +1,11 @@
+--- origsrc/caps-0.4.2/Makefile	2007-06-19 03:19:01.000000000 -0500
++++ src/caps-0.4.2/Makefile	2009-03-01 23:35:01.421875000 -0600
+@@ -1,7 +1,7 @@
+ PREFIX = /usr/local
+ 
+ CC = g++
+-OPTS = -O2 -ffast-math -funroll-loops -Wall -fPIC -DPIC
++OPTS = -O2 -ffast-math -funroll-loops -Wall -DPIC -DDLL_EXPORT
+ #OPTS = -g -DDEBUG 
+ 
+ -include defines.make

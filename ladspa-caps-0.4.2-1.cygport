@@ -1,0 +1,17 @@
+DESCRIPTION="LADSPA CAPS Audio Plugin Suite"
+HOMEPAGE="http://quitte.de/dsp/caps.html"
+SRC_URI="http://quitte.de/dsp/caps_${PV}.tar.gz"
+PATCH_URI="0.4.2-fPIC.patch"
+
+SRC_DIR="caps-${PV}"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	cyginstall PREFIX=${D}/usr
+}
