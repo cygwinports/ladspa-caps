@@ -5,6 +5,8 @@ PATCH_URI="0.4.2-fPIC.patch"
 
 SRC_DIR="caps-${PV}"
 
+DISTCLEANFILES="ladspa.h"
+
 src_compile() {
 	lndirs
 	cd ${B}
