@@ -9,3 +9,12 @@
  #OPTS = -g -DDEBUG 
  
  -include defines.make
+@@ -42,7 +42,7 @@ caps.rdf: all tools/make-rdf.py
+ 	python tools/make-rdf.py > $(PLUG).rdf
+ 
+ $(PLUG).so: $(OBJECTS)
+-	$(CC) -nostartfiles $(CFLAGS) -shared -o $@ $(OBJECTS)
++	$(CC) $(CFLAGS) -shared -o $@ $(OBJECTS)
+ 
+ .cc.s: 
+ 	$(CC) $(CFLAGS) -S $<

@@ -1,0 +1,57 @@
+ladspa-caps
+------------------------------------------
+CAPS, the C* Audio Plugin Suite, is a collection of refined LADSPA audio 
+plugins capable of (and mainly intended for) realtime operation. The 
+suite includes DSP units emulating instrument amplifiers, stomp-box 
+classics, versatile 'virtual analogue' oscillators, fractal oscillation, 
+reverb, equalization and more.
+
+Runtime requirements:
+  cygwin-1.7.0-50
+  libgcc1-4.3.2-2
+  libstdc++6-4.3.2-2
+
+Build requirements:
+(besides corresponding -devel packages)
+  binutils-20080624-2
+  cygport-0.9.7-1
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  ladspa-sdk-1.13-10
+  make-3.81-2
+
+Canonical website:
+  http://quitte.de/dsp/caps.html
+
+-------------------------------------------
+
+Build instructions:
+  unpack ladspa-caps-0.4.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./ladspa-caps-0.4.2-X.cygport all
+
+This will create:
+  /usr/src/ladspa-caps-0.4.2-X-src.tar.bz2
+  /usr/src/ladspa-caps-0.4.2-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/ladspa/caps.so
+  /usr/share/doc/ladspa-caps/COPYING
+  /usr/share/doc/ladspa-caps/README
+  /usr/share/ladspa/rdf/caps.rdf
+
+------------------
+
+Port Notes:
+
+----- version 0.4.2-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
