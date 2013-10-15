@@ -1,0 +1,27 @@
+NAME="ladspa-caps"
+VERSION=0.9.16
+RELEASE=1
+CATEGORY="Audio"
+SUMMARY="LADSPA C* Audio Plugin Suite"
+DESCRIPTION="CAPS, the C* Audio Plugin Suite, is a collection of refined
+LADSPA audio plugins capable of (and mainly intended for) realtime operation.
+The suite includes DSP units emulating instrument amplifiers, stomp-box
+classics, versatile 'virtual analogue' oscillators, fractal oscillation,
+reverb, equalization and more."
+HOMEPAGE="http://quitte.de/dsp/caps.html"
+SRC_URI="http://quitte.de/dsp/caps_${VERSION}.tar.bz2"
+SRC_DIR="caps-${VERSION}"
+
+DISTCLEANFILES="ladspa.h"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	./configure.py
+	cygmake OPTS="${CFLAGS} -ffast-math -funroll-loops"
+}
+
+src_install() {
+	cd ${B}
+	cyginstall PREFIX=${D}/usr STRIP=:
+}
